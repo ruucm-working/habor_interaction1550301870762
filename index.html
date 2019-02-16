@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <script src="build/react.development.js"></script>
+        <script src="build/react-dom.development.js"></script>
+        <script src="build/framer.js"></script>
+
+        <link href="build/Draft.css" rel="stylesheet" />
+        <link href="build/style.css" rel="stylesheet" />
+
+        <!-- Workaround for a WebKit bug: loading via URL from the stylesheet is denied if this file is loaded via file:/// -->
+        <style>
+            @font-face {
+                font-family: "Roboto Mono";
+                font-style: normal;
+                font-weight: 400;
+                src: local("Roboto Mono"), local("RobotoMono-Regular"),
+                    url("fonts/RobotoMono-Regular.ttf") format("truetype");
+            }
+        </style>
+        <style>
+            * {
+                -webkit-font-smoothing: antialiased;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main></main>
+        <script src="build/standalone.js"></script>
+        
+        <script id="build_index_js">
+        (function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("framer"));
+	else if(typeof define === 'function' && define.amd)
+		define(["framer"], factory);
+	else {
+		var a = typeof exports === 'object' ? factory(require("framer")) : factory(root["Framer"]);
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(window, function(__WEBPACK_EXTERNAL_MODULE_framer__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		try { modules[moduleId].call(module.exports, module, module.exports, __webpack_require__); } catch (error) { module.exports = { error } }
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// asset url
+/******/ 	var __module_i = eval("typeof module !== 'undefined' ? module.i : ''");
+/******/ 	var __framer_package = (/(node_modules[/].*)[/](build|dist).index.js/.exec(__module_i) || [])[1]
+/******/ 	function __asset_url__(src) { return __WEBPACK_EXTERNAL_MODULE_framer__.serverURL(__framer_package, src) };
+/******/ 	installedModules['framer/resource'] = { i: 'framer/resource', l: true, exports: { url: __asset_url__ } };
+/******/
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./package.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./code sync recursive \\.(t|j)s(x?)|\\.css$":
+/*!***************************************!*\
+  !*** ./code sync \.(t|j)s(x?)|\.css$ ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./App.tsx": "./code/App.tsx",
+	"./Examples.tsx": "./code/Examples.tsx",
+	"./canvas.tsx": "./code/canvas.tsx"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	var module = __webpack_require__(id);
+	return module;
+}
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) { // check for number or string
+		var e = new Error('Cannot find module "' + req + '".');
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return id;
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./code sync recursive \\.(t|j)s(x?)|\\.css$";
+
+/***/ }),
+
+/***/ "./code/App.tsx":
+/*!**********************!*\
+  !*** ./code/App.tsx ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst framer_1 = __webpack_require__(/*! framer */ \"framer\");\nexports.sleep = sec => {\n    window[\"__checkBudget__\"]();\n    return new Promise(resolve => setTimeout(resolve, sec * 1000));\n};\nconst data = framer_1.Data({\n    myMoveleft01: framer_1.Animatable(170),\n    myMovetop01: framer_1.Animatable(345),\n    myOpacity01: framer_1.Animatable(0),\n    myMoveright02: framer_1.Animatable(175),\n    myMovetop02: framer_1.Animatable(363),\n    myOpacity02: framer_1.Animatable(0),\n    myMoveleft03: framer_1.Animatable(373),\n    myMovebottom03: framer_1.Animatable(359),\n    myOpacity03: framer_1.Animatable(0),\n    squareScale: framer_1.Animatable(1),\n    myBackground: framer_1.Animatable(\"#BDBDBD\")\n});\nexports.myMove01 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        left: data.myMoveleft01,\n        top: data.myMovetop01,\n        opacity: data.myOpacity01\n    };\n};\nexports.myMove02 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        right: data.myMoveright02,\n        top: data.myMovetop02,\n        opacity: data.myOpacity02\n    };\n};\nexports.myMove03 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        left: data.myMoveleft03,\n        bottom: data.myMovebottom03,\n        opacity: data.myOpacity03\n    };\n};\nexports.Square01 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        background: data.myBackground,\n        scale: data.squareScale,\n        onMouseEnter() {\n            return __awaiter(this, void 0, void 0, function* () {\n                window[\"__checkBudget__\"]();\n                framer_1.animate.bezier(data.myBackground, \"#4265FF\", {\n                    duration: 0.01\n                });\n                framer_1.animate.spring(data.squareScale, 1.13, {\n                    duration: 0.55\n                });\n                yield exports.sleep(0.2);\n                framer_1.animate.spring(data.myMoveleft01, 70, {\n                    duration: 0.25,\n                    tension: 300,\n                    friction: 500\n                });\n                framer_1.animate.spring(data.myMovetop01, 245, {\n                    duration: 0.25,\n                    tension: 300,\n                    friction: 100\n                });\n                framer_1.animate.spring(data.myOpacity01, 1, {\n                    duration: 0.45,\n                    tension: 100,\n                    friction: 1000\n                });\n                yield exports.sleep(0.1);\n                framer_1.animate.spring(data.myMoveright02, 75, {\n                    duration: 0.32,\n                    tension: 300,\n                    friction: 500\n                });\n                framer_1.animate.spring(data.myMovetop02, 262, {\n                    duration: 0.32,\n                    tension: 300,\n                    friction: 100\n                });\n                framer_1.animate.spring(data.myOpacity02, 1, {\n                    duration: 0.32,\n                    tension: 100,\n                    friction: 1000\n                });\n                yield exports.sleep(0.15);\n                framer_1.animate.spring(data.myMoveleft03, 273, {\n                    duration: 0.32,\n                    tension: 500,\n                    friction: 500\n                });\n                framer_1.animate.spring(data.myMovebottom03, 259, {\n                    duration: 0.32,\n                    tension: 300,\n                    friction: 100\n                });\n                framer_1.animate.spring(data.myOpacity03, 1, {\n                    duration: 0.35,\n                    tension: 100,\n                    friction: 1000\n                });\n            });\n        }\n    };\n};\nexports.__info__ = [{ name: \"myMove01\", type: \"override\" }, { name: \"myMove02\", type: \"override\" }, { name: \"myMove03\", type: \"override\" }, { name: \"Square01\", type: \"override\" }];\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb2RlL0FwcC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0EsbUNBQW1DLE1BQU0sNkJBQTZCLEVBQUUsWUFBWSxXQUFXLEVBQUU7QUFDakcsa0NBQWtDLE1BQU0saUNBQWlDLEVBQUUsWUFBWSxXQUFXLEVBQUU7QUFDcEcsK0JBQStCLGlFQUFpRSx1QkFBdUIsRUFBRSw0QkFBNEI7QUFDcko7QUFDQSxLQUFLO0FBQ0w7QUFDQSw4Q0FBOEMsY0FBYztBQUM1RDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsQ0FBQztBQUNEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsaUJBQWlCO0FBQ2pCO0FBQ0E7QUFDQSxpQkFBaUI7QUFDakI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGlCQUFpQjtBQUNqQjtBQUNBO0FBQ0E7QUFDQTtBQUNBLGlCQUFpQjtBQUNqQjtBQUNBO0FBQ0E7QUFDQTtBQUNBLGlCQUFpQjtBQUNqQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsaUJBQWlCO0FBQ2pCO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsaUJBQWlCO0FBQ2pCO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsaUJBQWlCO0FBQ2pCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxpQkFBaUI7QUFDakI7QUFDQTtBQUNBO0FBQ0E7QUFDQSxpQkFBaUI7QUFDakI7QUFDQTtBQUNBO0FBQ0E7QUFDQSxpQkFBaUI7QUFDakIsYUFBYTtBQUNiO0FBQ0E7QUFDQTtBQUNBLHFCQUFxQixxQ0FBcUMsR0FBRyxxQ0FBcUMsR0FBRyxxQ0FBcUMsR0FBRyxxQ0FBcUMiLCJmaWxlIjoiLi9jb2RlL0FwcC50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcbnZhciBfX2F3YWl0ZXIgPSAodGhpcyAmJiB0aGlzLl9fYXdhaXRlcikgfHwgZnVuY3Rpb24gKHRoaXNBcmcsIF9hcmd1bWVudHMsIFAsIGdlbmVyYXRvcikge1xuICAgIHJldHVybiBuZXcgKFAgfHwgKFAgPSBQcm9taXNlKSkoZnVuY3Rpb24gKHJlc29sdmUsIHJlamVjdCkge1xuICAgICAgICBmdW5jdGlvbiBmdWxmaWxsZWQodmFsdWUpIHsgdHJ5IHsgc3RlcChnZW5lcmF0b3IubmV4dCh2YWx1ZSkpOyB9IGNhdGNoIChlKSB7IHJlamVjdChlKTsgfSB9XG4gICAgICAgIGZ1bmN0aW9uIHJlamVjdGVkKHZhbHVlKSB7IHRyeSB7IHN0ZXAoZ2VuZXJhdG9yW1widGhyb3dcIl0odmFsdWUpKTsgfSBjYXRjaCAoZSkgeyByZWplY3QoZSk7IH0gfVxuICAgICAgICBmdW5jdGlvbiBzdGVwKHJlc3VsdCkgeyByZXN1bHQuZG9uZSA/IHJlc29sdmUocmVzdWx0LnZhbHVlKSA6IG5ldyBQKGZ1bmN0aW9uIChyZXNvbHZlKSB7IHJlc29sdmUocmVzdWx0LnZhbHVlKTsgfSkudGhlbihmdWxmaWxsZWQsIHJlamVjdGVkKTsgfVxuICAgICAgICBzdGVwKChnZW5lcmF0b3IgPSBnZW5lcmF0b3IuYXBwbHkodGhpc0FyZywgX2FyZ3VtZW50cyB8fCBbXSkpLm5leHQoKSk7XG4gICAgfSk7XG59O1xuT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIFwiX19lc01vZHVsZVwiLCB7IHZhbHVlOiB0cnVlIH0pO1xuY29uc3QgZnJhbWVyXzEgPSByZXF1aXJlKFwiZnJhbWVyXCIpO1xuZXhwb3J0cy5zbGVlcCA9IHNlYyA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgcmV0dXJuIG5ldyBQcm9taXNlKHJlc29sdmUgPT4gc2V0VGltZW91dChyZXNvbHZlLCBzZWMgKiAxMDAwKSk7XG59O1xuY29uc3QgZGF0YSA9IGZyYW1lcl8xLkRhdGEoe1xuICAgIG15TW92ZWxlZnQwMTogZnJhbWVyXzEuQW5pbWF0YWJsZSgxNzApLFxuICAgIG15TW92ZXRvcDAxOiBmcmFtZXJfMS5BbmltYXRhYmxlKDM0NSksXG4gICAgbXlPcGFjaXR5MDE6IGZyYW1lcl8xLkFuaW1hdGFibGUoMCksXG4gICAgbXlNb3ZlcmlnaHQwMjogZnJhbWVyXzEuQW5pbWF0YWJsZSgxNzUpLFxuICAgIG15TW92ZXRvcDAyOiBmcmFtZXJfMS5BbmltYXRhYmxlKDM2MyksXG4gICAgbXlPcGFjaXR5MDI6IGZyYW1lcl8xLkFuaW1hdGFibGUoMCksXG4gICAgbXlNb3ZlbGVmdDAzOiBmcmFtZXJfMS5BbmltYXRhYmxlKDM3MyksXG4gICAgbXlNb3ZlYm90dG9tMDM6IGZyYW1lcl8xLkFuaW1hdGFibGUoMzU5KSxcbiAgICBteU9wYWNpdHkwMzogZnJhbWVyXzEuQW5pbWF0YWJsZSgwKSxcbiAgICBzcXVhcmVTY2FsZTogZnJhbWVyXzEuQW5pbWF0YWJsZSgxKSxcbiAgICBteUJhY2tncm91bmQ6IGZyYW1lcl8xLkFuaW1hdGFibGUoXCIjQkRCREJEXCIpXG59KTtcbmV4cG9ydHMubXlNb3ZlMDEgPSAoKSA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgbGVmdDogZGF0YS5teU1vdmVsZWZ0MDEsXG4gICAgICAgIHRvcDogZGF0YS5teU1vdmV0b3AwMSxcbiAgICAgICAgb3BhY2l0eTogZGF0YS5teU9wYWNpdHkwMVxuICAgIH07XG59O1xuZXhwb3J0cy5teU1vdmUwMiA9ICgpID0+IHtcbiAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICByZXR1cm4ge1xuICAgICAgICByaWdodDogZGF0YS5teU1vdmVyaWdodDAyLFxuICAgICAgICB0b3A6IGRhdGEubXlNb3ZldG9wMDIsXG4gICAgICAgIG9wYWNpdHk6IGRhdGEubXlPcGFjaXR5MDJcbiAgICB9O1xufTtcbmV4cG9ydHMubXlNb3ZlMDMgPSAoKSA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgbGVmdDogZGF0YS5teU1vdmVsZWZ0MDMsXG4gICAgICAgIGJvdHRvbTogZGF0YS5teU1vdmVib3R0b20wMyxcbiAgICAgICAgb3BhY2l0eTogZGF0YS5teU9wYWNpdHkwM1xuICAgIH07XG59O1xuZXhwb3J0cy5TcXVhcmUwMSA9ICgpID0+IHtcbiAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICByZXR1cm4ge1xuICAgICAgICBiYWNrZ3JvdW5kOiBkYXRhLm15QmFja2dyb3VuZCxcbiAgICAgICAgc2NhbGU6IGRhdGEuc3F1YXJlU2NhbGUsXG4gICAgICAgIG9uTW91c2VFbnRlcigpIHtcbiAgICAgICAgICAgIHJldHVybiBfX2F3YWl0ZXIodGhpcywgdm9pZCAwLCB2b2lkIDAsIGZ1bmN0aW9uKiAoKSB7XG4gICAgICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICAgICAgZnJhbWVyXzEuYW5pbWF0ZS5iZXppZXIoZGF0YS5teUJhY2tncm91bmQsIFwiIzQyNjVGRlwiLCB7XG4gICAgICAgICAgICAgICAgICAgIGR1cmF0aW9uOiAwLjAxXG4gICAgICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICAgICAgZnJhbWVyXzEuYW5pbWF0ZS5zcHJpbmcoZGF0YS5zcXVhcmVTY2FsZSwgMS4xMywge1xuICAgICAgICAgICAgICAgICAgICBkdXJhdGlvbjogMC41NVxuICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgICAgIHlpZWxkIGV4cG9ydHMuc2xlZXAoMC4yKTtcbiAgICAgICAgICAgICAgICBmcmFtZXJfMS5hbmltYXRlLnNwcmluZyhkYXRhLm15TW92ZWxlZnQwMSwgNzAsIHtcbiAgICAgICAgICAgICAgICAgICAgZHVyYXRpb246IDAuMjUsXG4gICAgICAgICAgICAgICAgICAgIHRlbnNpb246IDMwMCxcbiAgICAgICAgICAgICAgICAgICAgZnJpY3Rpb246IDUwMFxuICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgICAgIGZyYW1lcl8xLmFuaW1hdGUuc3ByaW5nKGRhdGEubXlNb3ZldG9wMDEsIDI0NSwge1xuICAgICAgICAgICAgICAgICAgICBkdXJhdGlvbjogMC4yNSxcbiAgICAgICAgICAgICAgICAgICAgdGVuc2lvbjogMzAwLFxuICAgICAgICAgICAgICAgICAgICBmcmljdGlvbjogMTAwXG4gICAgICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICAgICAgZnJhbWVyXzEuYW5pbWF0ZS5zcHJpbmcoZGF0YS5teU9wYWNpdHkwMSwgMSwge1xuICAgICAgICAgICAgICAgICAgICBkdXJhdGlvbjogMC40NSxcbiAgICAgICAgICAgICAgICAgICAgdGVuc2lvbjogMTAwLFxuICAgICAgICAgICAgICAgICAgICBmcmljdGlvbjogMTAwMFxuICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgICAgIHlpZWxkIGV4cG9ydHMuc2xlZXAoMC4xKTtcbiAgICAgICAgICAgICAgICBmcmFtZXJfMS5hbmltYXRlLnNwcmluZyhkYXRhLm15TW92ZXJpZ2h0MDIsIDc1LCB7XG4gICAgICAgICAgICAgICAgICAgIGR1cmF0aW9uOiAwLjMyLFxuICAgICAgICAgICAgICAgICAgICB0ZW5zaW9uOiAzMDAsXG4gICAgICAgICAgICAgICAgICAgIGZyaWN0aW9uOiA1MDBcbiAgICAgICAgICAgICAgICB9KTtcbiAgICAgICAgICAgICAgICBmcmFtZXJfMS5hbmltYXRlLnNwcmluZyhkYXRhLm15TW92ZXRvcDAyLCAyNjIsIHtcbiAgICAgICAgICAgICAgICAgICAgZHVyYXRpb246IDAuMzIsXG4gICAgICAgICAgICAgICAgICAgIHRlbnNpb246IDMwMCxcbiAgICAgICAgICAgICAgICAgICAgZnJpY3Rpb246IDEwMFxuICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgICAgIGZyYW1lcl8xLmFuaW1hdGUuc3ByaW5nKGRhdGEubXlPcGFjaXR5MDIsIDEsIHtcbiAgICAgICAgICAgICAgICAgICAgZHVyYXRpb246IDAuMzIsXG4gICAgICAgICAgICAgICAgICAgIHRlbnNpb246IDEwMCxcbiAgICAgICAgICAgICAgICAgICAgZnJpY3Rpb246IDEwMDBcbiAgICAgICAgICAgICAgICB9KTtcbiAgICAgICAgICAgICAgICB5aWVsZCBleHBvcnRzLnNsZWVwKDAuMTUpO1xuICAgICAgICAgICAgICAgIGZyYW1lcl8xLmFuaW1hdGUuc3ByaW5nKGRhdGEubXlNb3ZlbGVmdDAzLCAyNzMsIHtcbiAgICAgICAgICAgICAgICAgICAgZHVyYXRpb246IDAuMzIsXG4gICAgICAgICAgICAgICAgICAgIHRlbnNpb246IDUwMCxcbiAgICAgICAgICAgICAgICAgICAgZnJpY3Rpb246IDUwMFxuICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgICAgIGZyYW1lcl8xLmFuaW1hdGUuc3ByaW5nKGRhdGEubXlNb3ZlYm90dG9tMDMsIDI1OSwge1xuICAgICAgICAgICAgICAgICAgICBkdXJhdGlvbjogMC4zMixcbiAgICAgICAgICAgICAgICAgICAgdGVuc2lvbjogMzAwLFxuICAgICAgICAgICAgICAgICAgICBmcmljdGlvbjogMTAwXG4gICAgICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICAgICAgZnJhbWVyXzEuYW5pbWF0ZS5zcHJpbmcoZGF0YS5teU9wYWNpdHkwMywgMSwge1xuICAgICAgICAgICAgICAgICAgICBkdXJhdGlvbjogMC4zNSxcbiAgICAgICAgICAgICAgICAgICAgdGVuc2lvbjogMTAwLFxuICAgICAgICAgICAgICAgICAgICBmcmljdGlvbjogMTAwMFxuICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgfSk7XG4gICAgICAgIH1cbiAgICB9O1xufTtcbmV4cG9ydHMuX19pbmZvX18gPSBbeyBuYW1lOiBcIm15TW92ZTAxXCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9LCB7IG5hbWU6IFwibXlNb3ZlMDJcIiwgdHlwZTogXCJvdmVycmlkZVwiIH0sIHsgbmFtZTogXCJteU1vdmUwM1wiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfSwgeyBuYW1lOiBcIlNxdWFyZTAxXCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9XTtcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./code/App.tsx\n");
+
+/***/ }),
+
+/***/ "./code/Examples.tsx":
+/*!***************************!*\
+  !*** ./code/Examples.tsx ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst framer_1 = __webpack_require__(/*! framer */ \"framer\");\nconst data = framer_1.Data({ toggle: true, scale: framer_1.Animatable(1), opacity: framer_1.Animatable(1), rotation: framer_1.Animatable(0), rotationY: framer_1.Animatable(0) });\nexports.Scale = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        scale: data.scale,\n        onTap() {\n            window[\"__checkBudget__\"]();\n            data.scale.set(0.6);\n            framer_1.animate.spring(data.scale, 1);\n        },\n    };\n};\nexports.Rotate = props => {\n    window[\"__checkBudget__\"]();\n    data.rotation.set(props.rotation);\n    return {\n        rotation: data.rotation,\n        onTap() {\n            window[\"__checkBudget__\"]();\n            framer_1.animate.spring(data.rotation, data.rotation.get() + 90, {\n                tension: 250,\n                friction: 20,\n            });\n        },\n    };\n};\nexports.Fade = props => {\n    window[\"__checkBudget__\"]();\n    data.opacity.set(props.opacity);\n    return {\n        opacity: data.opacity,\n        onTap() {\n            window[\"__checkBudget__\"]();\n            framer_1.animate.linear(data.opacity, 0, 0.2);\n        },\n    };\n};\nexports.FlipOutput = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        rotationY: data.rotationY,\n    };\n};\nexports.FlipInput = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            const toggle = data.toggle;\n            framer_1.animate.spring({ rotationY: data.rotationY }, {\n                rotationY: toggle ? 360 : 0,\n            }, { tension: 200, friction: 20 });\n            data.toggle = !toggle;\n        },\n    };\n};\nexports.__info__ = [{ name: \"Scale\", type: \"override\" }, { name: \"Rotate\", type: \"override\" }, { name: \"Fade\", type: \"override\" }, { name: \"FlipOutput\", type: \"override\" }, { name: \"FlipInput\", type: \"override\" }];\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb2RlL0V4YW1wbGVzLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBLDhDQUE4QyxjQUFjO0FBQzVEO0FBQ0EsNEJBQTRCLG9KQUFvSjtBQUNoTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsU0FBUztBQUNUO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGFBQWE7QUFDYixTQUFTO0FBQ1Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxTQUFTO0FBQ1Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHFDQUFxQyw0QkFBNEI7QUFDakU7QUFDQSxhQUFhLEdBQUcsNkJBQTZCO0FBQzdDO0FBQ0EsU0FBUztBQUNUO0FBQ0E7QUFDQSxxQkFBcUIsa0NBQWtDLEdBQUcsbUNBQW1DLEdBQUcsaUNBQWlDLEdBQUcsdUNBQXVDLEdBQUcsc0NBQXNDIiwiZmlsZSI6Ii4vY29kZS9FeGFtcGxlcy50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwgeyB2YWx1ZTogdHJ1ZSB9KTtcbmNvbnN0IGZyYW1lcl8xID0gcmVxdWlyZShcImZyYW1lclwiKTtcbmNvbnN0IGRhdGEgPSBmcmFtZXJfMS5EYXRhKHsgdG9nZ2xlOiB0cnVlLCBzY2FsZTogZnJhbWVyXzEuQW5pbWF0YWJsZSgxKSwgb3BhY2l0eTogZnJhbWVyXzEuQW5pbWF0YWJsZSgxKSwgcm90YXRpb246IGZyYW1lcl8xLkFuaW1hdGFibGUoMCksIHJvdGF0aW9uWTogZnJhbWVyXzEuQW5pbWF0YWJsZSgwKSB9KTtcbmV4cG9ydHMuU2NhbGUgPSAoKSA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgc2NhbGU6IGRhdGEuc2NhbGUsXG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBkYXRhLnNjYWxlLnNldCgwLjYpO1xuICAgICAgICAgICAgZnJhbWVyXzEuYW5pbWF0ZS5zcHJpbmcoZGF0YS5zY2FsZSwgMSk7XG4gICAgICAgIH0sXG4gICAgfTtcbn07XG5leHBvcnRzLlJvdGF0ZSA9IHByb3BzID0+IHtcbiAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICBkYXRhLnJvdGF0aW9uLnNldChwcm9wcy5yb3RhdGlvbik7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgcm90YXRpb246IGRhdGEucm90YXRpb24sXG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBmcmFtZXJfMS5hbmltYXRlLnNwcmluZyhkYXRhLnJvdGF0aW9uLCBkYXRhLnJvdGF0aW9uLmdldCgpICsgOTAsIHtcbiAgICAgICAgICAgICAgICB0ZW5zaW9uOiAyNTAsXG4gICAgICAgICAgICAgICAgZnJpY3Rpb246IDIwLFxuICAgICAgICAgICAgfSk7XG4gICAgICAgIH0sXG4gICAgfTtcbn07XG5leHBvcnRzLkZhZGUgPSBwcm9wcyA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgZGF0YS5vcGFjaXR5LnNldChwcm9wcy5vcGFjaXR5KTtcbiAgICByZXR1cm4ge1xuICAgICAgICBvcGFjaXR5OiBkYXRhLm9wYWNpdHksXG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBmcmFtZXJfMS5hbmltYXRlLmxpbmVhcihkYXRhLm9wYWNpdHksIDAsIDAuMik7XG4gICAgICAgIH0sXG4gICAgfTtcbn07XG5leHBvcnRzLkZsaXBPdXRwdXQgPSAoKSA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgcm90YXRpb25ZOiBkYXRhLnJvdGF0aW9uWSxcbiAgICB9O1xufTtcbmV4cG9ydHMuRmxpcElucHV0ID0gKCkgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBjb25zdCB0b2dnbGUgPSBkYXRhLnRvZ2dsZTtcbiAgICAgICAgICAgIGZyYW1lcl8xLmFuaW1hdGUuc3ByaW5nKHsgcm90YXRpb25ZOiBkYXRhLnJvdGF0aW9uWSB9LCB7XG4gICAgICAgICAgICAgICAgcm90YXRpb25ZOiB0b2dnbGUgPyAzNjAgOiAwLFxuICAgICAgICAgICAgfSwgeyB0ZW5zaW9uOiAyMDAsIGZyaWN0aW9uOiAyMCB9KTtcbiAgICAgICAgICAgIGRhdGEudG9nZ2xlID0gIXRvZ2dsZTtcbiAgICAgICAgfSxcbiAgICB9O1xufTtcbmV4cG9ydHMuX19pbmZvX18gPSBbeyBuYW1lOiBcIlNjYWxlXCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9LCB7IG5hbWU6IFwiUm90YXRlXCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9LCB7IG5hbWU6IFwiRmFkZVwiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfSwgeyBuYW1lOiBcIkZsaXBPdXRwdXRcIiwgdHlwZTogXCJvdmVycmlkZVwiIH0sIHsgbmFtZTogXCJGbGlwSW5wdXRcIiwgdHlwZTogXCJvdmVycmlkZVwiIH1dO1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./code/Examples.tsx\n");
+
+/***/ }),
+
+/***/ "./code/canvas.tsx":
+/*!*************************!*\
+  !*** ./code/canvas.tsx ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+// WARNING: this file is auto generated, any changes will be lost
+const framer_1 = __webpack_require__(/*! framer */ "framer");
+const canvas = framer_1.CanvasStore.shared({"children":[]});
+
+
+/***/ }),
+
+/***/ "./package.js":
+/*!********************!*\
+  !*** ./package.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// The template for the dynamic webpack entry. Be aware of the variables
+
+const packageJson = __webpack_require__(/*! ./package.json */ "./package.json")
+
+const package = {
+    packageJson,
+    sourceModules: {},
+    dependencies: {},
+}
+
+// This is a special webpack thing that watches the whole directory
+// https://github.com/webpack/docs/wiki/context
+const ctx = __webpack_require__("./code sync recursive \\.(t|j)s(x?)|\\.css$")
+
+ctx.keys().forEach(key => {
+    package.sourceModules[key] = () => ctx(key)
+})
+
+// The packages are passed in through a template
+const packages = {}
+
+                packages["framer"] = () => {
+                    var package = {}
+                    try {
+                        package = __webpack_require__(/*! framer */ "framer")
+                    } catch (e) {
+                        console.log(e)
+                    }
+                    package.__framer__ = package.__framer__ || {}
+                    package.__framer__.packageJson = {"name":"framer","version":"0.10.6","main":"build/framer.js","author":"Framer","license":"MIT","scripts":{"coverage":"jest --config jest.json --coverage","test":"jest --config jest.json","watch":"jest --config jest.json --watch"},"devDependencies":{"@microsoft/api-documenter":"^1.5.47","@microsoft/api-extractor":"^7","@types/chalk":"^2.2.0","@types/draft-js":"0.10.19","@types/enzyme":"^3.1.10","@types/enzyme-adapter-react-16":"^1.0.3","@types/hsluv":"https://github.com/framer/typed_hsluv#bump","@types/jest":"^23.0.0","@types/jest-diff":"^20.0.0","@types/jest-matcher-utils":"^21.0.1","@types/node":"^9.6.0","@types/react":"^16","@types/react-dom":"^16","cache-loader":"^1.2.2","chalk":"^2.4.1","convert-tsconfig-paths-to-webpack-aliases":"^0.9.2","css.escape":"^1.5.1","draft-js":"0.10.4","enzyme":"^3.3.0","enzyme-adapter-react-16":"^1.1.1","eventemitter3":"^3.1.0","fork-ts-checker-webpack-plugin":"^0.4.1","hoist-non-react-statics":"^2.5.0","hsluv":"^0.0.3","immutable":"^3.8.2","jest":"^23.1.0","jest-diff":"^23.6.0","jest-junit":"^5.2.0","progress-bar-webpack-plugin":"^1.11.0","raf":"^3.4.0","react":"~16.4","react-dev-utils":"^5.0.1","react-dom":"~16.4","semver":"^5.6.0","ts-jest":"^23.10.5","ts-loader":"^4.1.0","typescript":"^3.0.1","watch":"^1.0.2","webpack":"^4.4.1","webpack-cli":"^3.1.2","webpack-dev-server":"^3.1.10","xcssmatrix":"^0.2.2"},"peerDependencies":{"react":"^16.3","react-dom":"^16.3"},"tsdoc":{"tsdocFlavor":"AEDoc"},"framer":{"components":[{"name":"Scroll","children":true,"properties":[{"key":"direction","title":"Direction","kind":"enum","options":["horizontal","vertical","both"]}]},{"name":"Page"},{"name":"Stack"},{"name":"FramerAppleWatch38","type":"device"},{"name":"FramerAppleWatch42","type":"device"},{"name":"FramerSonySmartWatch","type":"device"},{"name":"FramerAppleIPhoneSE","type":"device"},{"name":"FramerAppleIPhone8","type":"device"},{"name":"FramerAppleIPhone8Plus","type":"device"},{"name":"FramerAppleIPhoneXS","type":"device"},{"name":"FramerAppleIPhoneXR","type":"device"},{"name":"FramerAppleIPhoneXSMax","type":"device"},{"name":"FramerGooglePixel2","type":"device"},{"name":"FramerGooglePixel2XL","type":"device"},{"name":"FramerGooglePixel3","type":"device"},{"name":"FramerGooglePixel3XL","type":"device"},{"name":"FramerSamsungNote5","type":"device"},{"name":"FramerSamsungGalaxyS9","type":"device"},{"name":"FramerAppleIPadAir","type":"device"},{"name":"FramerAppleIPadMini","type":"device"},{"name":"FramerAppleIPadPro","type":"device"},{"name":"FramerGoogleNexusTablet","type":"device"},{"name":"FramerMicrosoftSurfacePro3","type":"device"},{"name":"FramerMicrosoftSurfacePro4","type":"device"},{"name":"FramerAppleIMac","type":"device"},{"name":"FramerAppleThunderboltDisplay","type":"device"},{"name":"FramerAppleMacBook","type":"device"},{"name":"FramerAppleMacBookAir","type":"device"},{"name":"FramerAppleMacBookPro","type":"device"},{"name":"FramerDellXPS","type":"device"},{"name":"FramerMicrosoftSurfaceBook","type":"device"},{"name":"FramerSonyW850C","type":"device"},{"name":"FramerStoreArtwork","type":"device"},{"name":"FramerStoreIcon","type":"device"}]}}
+                    return package
+                }
+
+package.dependencies = packages
+
+exports.__framer__ = package
+
+
+/***/ }),
+
+/***/ "./package.json":
+/*!**********************!*\
+  !*** ./package.json ***!
+  \**********************/
+/*! exports provided: main, license, devDependencies, peerDependencies, framer, author, default */
+/***/ (function(module) {
+
+module.exports = {"main":"dist/index.js","license":"MIT","devDependencies":{"@types/react":"^16.4.16"},"peerDependencies":{"framer":"^0.10.5","react":"^16.3.0","react-dom":"^16.3.0"},"framer":{"id":"1c5651c8-3fbb-423e-b634-46627e14ffd7"},"author":"HyeonJun Jang"};
+
+/***/ }),
+
+/***/ "framer":
+/*!******************************************************************************************!*\
+  !*** external {"root":"Framer","commonjs2":"framer","commonjs":"framer","amd":"framer"} ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_framer__;
+
+/***/ })
+
+/******/ });
+});
+        </script>
+        
+        <script>
+        const data = {
+  "presentationNode": {
+    "componentClass": "Frame",
+    "props": {
+      "key": "cRVgSLSly",
+      "id": "id_cRVgSLSly",
+      "willChangeTransform": false,
+      "opacity": 1,
+      "radius": 0,
+      "rotation": 0,
+      "visible": true,
+      "overflow": "hidden",
+      "background": {
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 1,
+        "h": 0,
+        "s": 0,
+        "l": 1,
+        "initialValue": "rgba(255,255,255,1)",
+        "roundA": 1,
+        "format": "rgb"
+      },
+      "left": 1133,
+      "right": null,
+      "top": -165,
+      "bottom": null,
+      "width": 1280,
+      "height": 699,
+      "aspectRatio": null,
+      "centerX": "0%",
+      "centerY": "0%",
+      "parentSize": null
+    },
+    "children": [
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "tY0H8jHfs",
+          "id": "id_tY0H8jHfs",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 0,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": null,
+          "left": -90,
+          "right": null,
+          "top": -49,
+          "bottom": null,
+          "width": 530,
+          "height": 516,
+          "aspectRatio": null,
+          "centerX": "13.671875%",
+          "centerY": "29.89985693848355%",
+          "parentSize": null
+        },
+        "children": [
+          {
+            "componentClass": "Frame",
+            "props": {
+              "key": "XLRajj9Jd",
+              "id": "id_XLRajj9Jd",
+              "willChangeTransform": false,
+              "opacity": 1,
+              "radius": 0,
+              "rotation": -150,
+              "visible": true,
+              "overflow": "visible",
+              "background": {
+                "src": "lXRFurth7BBxzd2HDKnMm30mQw.png",
+                "pixelWidth": 250,
+                "pixelHeight": 250,
+                "intrinsicWidth": 125,
+                "intrinsicHeight": 125,
+                "fit": "fill"
+              },
+              "left": 273,
+              "right": null,
+              "top": null,
+              "bottom": 259,
+              "width": 225,
+              "height": 225,
+              "aspectRatio": 1,
+              "centerX": "72.73584905660377%",
+              "centerY": "28.003875968992247%",
+              "parentSize": null
+            },
+            "children": [],
+            "codeOverrideIdentifier": "./App.tsx_myMove03"
+          },
+          {
+            "componentClass": "Frame",
+            "props": {
+              "key": "vfnjXS8l0",
+              "id": "id_vfnjXS8l0",
+              "willChangeTransform": false,
+              "opacity": 0,
+              "radius": 0,
+              "rotation": 120,
+              "visible": true,
+              "overflow": "visible",
+              "background": {
+                "src": "WrkdrDhm7JUwCPzfF9qrqJZjfew.png",
+                "pixelWidth": 250,
+                "pixelHeight": 250,
+                "intrinsicWidth": 125,
+                "intrinsicHeight": 125,
+                "fit": "fill"
+              },
+              "left": 92,
+              "right": null,
+              "top": 96,
+              "bottom": null,
+              "width": 287,
+              "height": 287,
+              "aspectRatio": 1,
+              "centerX": "44.43396226415094%",
+              "centerY": "46.41472868217054%",
+              "parentSize": null
+            },
+            "children": []
+          },
+          {
+            "componentClass": "Frame",
+            "props": {
+              "key": "lcM26YEFL",
+              "id": "id_lcM26YEFL",
+              "willChangeTransform": false,
+              "opacity": 1,
+              "radius": 0,
+              "rotation": 0,
+              "visible": true,
+              "overflow": "visible",
+              "background": {
+                "src": "Y4sBb7iStlTyUrRxUJQIY0Ykmc.png",
+                "pixelWidth": 250,
+                "pixelHeight": 250,
+                "intrinsicWidth": 125,
+                "intrinsicHeight": 125,
+                "fit": "fill"
+              },
+              "left": null,
+              "right": 75,
+              "top": 262,
+              "bottom": null,
+              "width": 181,
+              "height": 181,
+              "aspectRatio": 1,
+              "centerX": "68.77358490566039%",
+              "centerY": "68.31395348837209%",
+              "parentSize": null
+            },
+            "children": [],
+            "codeOverrideIdentifier": "./App.tsx_myMove02"
+          },
+          {
+            "componentClass": "Frame",
+            "props": {
+              "key": "Aa4sslwpx",
+              "id": "id_Aa4sslwpx",
+              "willChangeTransform": false,
+              "opacity": 0,
+              "radius": 0,
+              "rotation": 0,
+              "visible": true,
+              "overflow": "visible",
+              "background": {
+                "src": "PqXWhAdhhwqjdiTmZteUNdapuZY.png",
+                "pixelWidth": 250,
+                "pixelHeight": 250,
+                "intrinsicWidth": 125,
+                "intrinsicHeight": 125,
+                "fit": "fill"
+              },
+              "left": 117,
+              "right": null,
+              "top": null,
+              "bottom": 176,
+              "width": 125,
+              "height": 125,
+              "aspectRatio": 1,
+              "centerX": "33.867924528301884%",
+              "centerY": "53.779069767441854%",
+              "parentSize": null
+            },
+            "children": []
+          },
+          {
+            "componentClass": "Frame",
+            "props": {
+              "key": "iXsFLvZsw",
+              "id": "id_iXsFLvZsw",
+              "willChangeTransform": false,
+              "opacity": 0,
+              "radius": 0,
+              "rotation": 0,
+              "visible": true,
+              "overflow": "visible",
+              "background": {
+                "src": "PqXWhAdhhwqjdiTmZteUNdapuZY.png",
+                "pixelWidth": 250,
+                "pixelHeight": 250,
+                "intrinsicWidth": 125,
+                "intrinsicHeight": 125,
+                "fit": "fill"
+              },
+              "left": 117,
+              "right": null,
+              "top": null,
+              "bottom": 176,
+              "width": 125,
+              "height": 125,
+              "aspectRatio": 1,
+              "centerX": "33.867924528301884%",
+              "centerY": "53.779069767441854%",
+              "parentSize": null
+            },
+            "children": []
+          },
+          {
+            "componentClass": "Frame",
+            "props": {
+              "key": "OpHiZdUL0",
+              "id": "id_OpHiZdUL0",
+              "willChangeTransform": false,
+              "opacity": 0,
+              "radius": 0,
+              "rotation": 165,
+              "visible": true,
+              "overflow": "visible",
+              "background": {
+                "src": "LcxZwns9pSRwYysKv1R2DeEXwFU.png",
+                "pixelWidth": 250,
+                "pixelHeight": 250,
+                "intrinsicWidth": 125,
+                "intrinsicHeight": 125,
+                "fit": "fill"
+              },
+              "left": 70,
+              "right": null,
+              "top": 24,
+              "bottom": null,
+              "width": 213,
+              "height": 213,
+              "aspectRatio": 1,
+              "centerX": "33.30188679245283%",
+              "centerY": "25.290697674418606%",
+              "parentSize": null
+            },
+            "children": []
+          },
+          {
+            "componentClass": "Frame",
+            "props": {
+              "key": "auFRQt8As",
+              "id": "id_auFRQt8As",
+              "willChangeTransform": false,
+              "opacity": 1,
+              "radius": 0,
+              "rotation": 45,
+              "visible": true,
+              "overflow": "visible",
+              "background": {
+                "src": "Ah7f3qATQ3pK4EebakEUNwck6V8.png",
+                "pixelWidth": 250,
+                "pixelHeight": 250,
+                "intrinsicWidth": 125,
+                "intrinsicHeight": 125,
+                "fit": "fill"
+              },
+              "left": 70,
+              "right": null,
+              "top": 245,
+              "bottom": null,
+              "width": 226,
+              "height": 226,
+              "aspectRatio": 1,
+              "centerX": "34.52830188679245%",
+              "centerY": "69.37984496124031%",
+              "parentSize": null
+            },
+            "children": [],
+            "codeOverrideIdentifier": "./App.tsx_myMove01"
+          }
+        ]
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "Mjoq5JfNO",
+          "id": "id_Mjoq5JfNO",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 12,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 189,
+            "g": 189,
+            "b": 189,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7411764705882353,
+            "initialValue": "rgb(189, 189, 189)",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "shadows": [
+            {
+              "enabled": true,
+              "x": 5,
+              "y": 8,
+              "color": "hsla(0, 0%, 0%, 0.15)",
+              "blur": 11,
+              "inset": false,
+              "spread": 0,
+              "__class": "BoxShadow"
+            }
+          ],
+          "left": 365,
+          "right": null,
+          "top": 60,
+          "bottom": null,
+          "width": 250,
+          "height": 250,
+          "aspectRatio": null,
+          "centerX": "38.28125%",
+          "centerY": "26.46638054363376%",
+          "parentSize": null
+        },
+        "children": []
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "t_aPf8fcK",
+          "id": "id_t_aPf8fcK",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 12,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 189,
+            "g": 189,
+            "b": 189,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7411764705882353,
+            "initialValue": "rgba(189, 189, 189, 1.00)",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "shadows": [
+            {
+              "enabled": true,
+              "x": 5,
+              "y": 8,
+              "color": "hsla(0, 0%, 0%, 0.15)",
+              "blur": 11,
+              "inset": false,
+              "spread": 0,
+              "__class": "BoxShadow"
+            }
+          ],
+          "left": 65,
+          "right": null,
+          "top": 60,
+          "bottom": null,
+          "width": 250,
+          "height": 250,
+          "aspectRatio": null,
+          "centerX": "14.84375%",
+          "centerY": "26.46638054363376%",
+          "parentSize": null
+        },
+        "children": [],
+        "codeOverrideIdentifier": "./App.tsx_Square01"
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "fZl5QaFmQ",
+          "id": "id_fZl5QaFmQ",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 12,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 189,
+            "g": 189,
+            "b": 189,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7411764705882353,
+            "initialValue": "rgb(189, 189, 189)",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "shadows": [
+            {
+              "enabled": true,
+              "x": 5,
+              "y": 8,
+              "color": "hsla(0, 0%, 0%, 0.15)",
+              "blur": 11,
+              "inset": false,
+              "spread": 0,
+              "__class": "BoxShadow"
+            }
+          ],
+          "left": null,
+          "right": 365,
+          "top": 60,
+          "bottom": null,
+          "width": 250,
+          "height": 250,
+          "aspectRatio": null,
+          "centerX": "61.71875%",
+          "centerY": "26.46638054363376%",
+          "parentSize": null
+        },
+        "children": []
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "D54eTI0vi",
+          "id": "id_D54eTI0vi",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 12,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 189,
+            "g": 189,
+            "b": 189,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7411764705882353,
+            "initialValue": "rgb(189, 189, 189)",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "shadows": [
+            {
+              "enabled": true,
+              "x": 5,
+              "y": 8,
+              "color": "hsla(0, 0%, 0%, 0.15)",
+              "blur": 11,
+              "inset": false,
+              "spread": 0,
+              "__class": "BoxShadow"
+            }
+          ],
+          "left": null,
+          "right": 65,
+          "top": 60,
+          "bottom": null,
+          "width": 250,
+          "height": 250,
+          "aspectRatio": null,
+          "centerX": "85.15625%",
+          "centerY": "26.46638054363376%",
+          "parentSize": null
+        },
+        "children": []
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "d5tWhINb7",
+          "id": "id_d5tWhINb7",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 12,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 189,
+            "g": 189,
+            "b": 189,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7411764705882353,
+            "initialValue": "rgb(189, 189, 189)",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "shadows": [
+            {
+              "enabled": true,
+              "x": 5,
+              "y": 8,
+              "color": "hsla(0, 0%, 0%, 0.15)",
+              "blur": 11,
+              "inset": false,
+              "spread": 0,
+              "__class": "BoxShadow"
+            }
+          ],
+          "left": 65,
+          "right": null,
+          "top": null,
+          "bottom": 79,
+          "width": 250,
+          "height": 250,
+          "aspectRatio": null,
+          "centerX": "14.84375%",
+          "centerY": "70.81545064377683%",
+          "parentSize": null
+        },
+        "children": []
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "gBEhj31Ak",
+          "id": "id_gBEhj31Ak",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 12,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 189,
+            "g": 189,
+            "b": 189,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7411764705882353,
+            "initialValue": "rgb(189, 189, 189)",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "shadows": [
+            {
+              "enabled": true,
+              "x": 5,
+              "y": 8,
+              "color": "hsla(0, 0%, 0%, 0.15)",
+              "blur": 11,
+              "inset": false,
+              "spread": 0,
+              "__class": "BoxShadow"
+            }
+          ],
+          "left": 365,
+          "right": null,
+          "top": null,
+          "bottom": 79,
+          "width": 250,
+          "height": 250,
+          "aspectRatio": null,
+          "centerX": "38.28125%",
+          "centerY": "70.81545064377683%",
+          "parentSize": null
+        },
+        "children": []
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "YHLiLDJWU",
+          "id": "id_YHLiLDJWU",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 12,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 189,
+            "g": 189,
+            "b": 189,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7411764705882353,
+            "initialValue": "rgb(189, 189, 189)",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "shadows": [
+            {
+              "enabled": true,
+              "x": 5,
+              "y": 8,
+              "color": "hsla(0, 0%, 0%, 0.15)",
+              "blur": 11,
+              "inset": false,
+              "spread": 0,
+              "__class": "BoxShadow"
+            }
+          ],
+          "left": null,
+          "right": 365,
+          "top": null,
+          "bottom": 79,
+          "width": 250,
+          "height": 250,
+          "aspectRatio": null,
+          "centerX": "61.71875%",
+          "centerY": "70.81545064377683%",
+          "parentSize": null
+        },
+        "children": []
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "gIgjUt0CA",
+          "id": "id_gIgjUt0CA",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 12,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 189,
+            "g": 189,
+            "b": 189,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7411764705882353,
+            "initialValue": "rgb(189, 189, 189)",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "shadows": [
+            {
+              "enabled": true,
+              "x": 5,
+              "y": 8,
+              "color": "hsla(0, 0%, 0%, 0.15)",
+              "blur": 11,
+              "inset": false,
+              "spread": 0,
+              "__class": "BoxShadow"
+            }
+          ],
+          "left": null,
+          "right": 65,
+          "top": null,
+          "bottom": 79,
+          "width": 250,
+          "height": 250,
+          "aspectRatio": null,
+          "centerX": "85.15625%",
+          "centerY": "70.81545064377683%",
+          "parentSize": null
+        },
+        "children": []
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "ufpv8q4Tk",
+          "id": "id_ufpv8q4Tk",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 12,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 189,
+            "g": 189,
+            "b": 189,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7411764705882353,
+            "initialValue": "rgb(189, 189, 189)",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "shadows": [
+            {
+              "enabled": true,
+              "x": 5,
+              "y": 8,
+              "color": "hsla(0, 0%, 0%, 0.15)",
+              "blur": 11,
+              "inset": false,
+              "spread": 0,
+              "__class": "BoxShadow"
+            }
+          ],
+          "left": 65,
+          "right": null,
+          "top": null,
+          "bottom": -231,
+          "width": 250,
+          "height": 250,
+          "aspectRatio": null,
+          "centerX": "14.84375%",
+          "centerY": "115.1645207439199%",
+          "parentSize": null
+        },
+        "children": []
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "d_boEw13p",
+          "id": "id_d_boEw13p",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 12,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 189,
+            "g": 189,
+            "b": 189,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7411764705882353,
+            "initialValue": "rgb(189, 189, 189)",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "shadows": [
+            {
+              "enabled": true,
+              "x": 5,
+              "y": 8,
+              "color": "hsla(0, 0%, 0%, 0.15)",
+              "blur": 11,
+              "inset": false,
+              "spread": 0,
+              "__class": "BoxShadow"
+            }
+          ],
+          "left": 365,
+          "right": null,
+          "top": null,
+          "bottom": -231,
+          "width": 250,
+          "height": 250,
+          "aspectRatio": null,
+          "centerX": "38.28125%",
+          "centerY": "115.1645207439199%",
+          "parentSize": null
+        },
+        "children": []
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "fZ8BKsAsg",
+          "id": "id_fZ8BKsAsg",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 12,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 189,
+            "g": 189,
+            "b": 189,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7411764705882353,
+            "initialValue": "rgb(189, 189, 189)",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "shadows": [
+            {
+              "enabled": true,
+              "x": 5,
+              "y": 8,
+              "color": "hsla(0, 0%, 0%, 0.15)",
+              "blur": 11,
+              "inset": false,
+              "spread": 0,
+              "__class": "BoxShadow"
+            }
+          ],
+          "left": null,
+          "right": 365,
+          "top": null,
+          "bottom": -231,
+          "width": 250,
+          "height": 250,
+          "aspectRatio": null,
+          "centerX": "61.71875%",
+          "centerY": "115.1645207439199%",
+          "parentSize": null
+        },
+        "children": []
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "QkJ767RE_",
+          "id": "id_QkJ767RE_",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 12,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 189,
+            "g": 189,
+            "b": 189,
+            "a": 1,
+            "h": 0,
+            "s": 0,
+            "l": 0.7411764705882353,
+            "initialValue": "rgb(189, 189, 189)",
+            "roundA": 1,
+            "format": "rgb"
+          },
+          "shadows": [
+            {
+              "enabled": true,
+              "x": 5,
+              "y": 8,
+              "color": "hsla(0, 0%, 0%, 0.15)",
+              "blur": 11,
+              "inset": false,
+              "spread": 0,
+              "__class": "BoxShadow"
+            }
+          ],
+          "left": null,
+          "right": 65,
+          "top": null,
+          "bottom": -231,
+          "width": 250,
+          "height": 250,
+          "aspectRatio": null,
+          "centerX": "85.15625%",
+          "centerY": "115.1645207439199%",
+          "parentSize": null
+        },
+        "children": []
+      }
+    ]
+  },
+  "metadata": {
+    "name": "Frame",
+    "id": "cRVgSLSly",
+    "width": 1280,
+    "height": 699,
+    "settings": {
+      "zoom": -1,
+      "rotate": false,
+      "bezel": false,
+      "responsive": false,
+      "touch": true,
+      "__class": "PreviewSettings"
+    }
+  },
+  "navigation": {}
+};
+        const $build_index_js = document.querySelector("#build_index_js")
+        const script = $build_index_js ? $build_index_js.textContent.trim() : ""
+        
+        // need react to have rendered, before we can do setPreviewData
+        setTimeout(() => {
+            if (script.length > 0) {
+                setPreviewData(script, data)
+            } else {
+                fetch("build/index.js").then((response) => {
+                    return response.text().then((script) => {
+                        setPreviewData(script, data)
+                    })
+                })
+            }
+        }, 0)
+        </script>
+    </body>
+</html>
